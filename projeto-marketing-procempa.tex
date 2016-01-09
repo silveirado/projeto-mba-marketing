@@ -1,4 +1,4 @@
-\documentclass[12pt,	twoside, a4paper,	brazil]{abntex2}
+\documentclass[12pt, oneside, a4paper, brazil]{abntex2}
 
 \usepackage{uarial}
 \usepackage[T1]{fontenc}
@@ -9,6 +9,7 @@
 \usepackage{microtype}
 \usepackage[brazilian,hyperpageref]{backref}
 \usepackage[alf]{abntex2cite}
+\usepackage[table]{xcolor}
 
 \renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
 \renewcommand{\backref}{}
@@ -67,9 +68,9 @@
 %\pdfbookmark[0]{\listfigurename}{lof}
 %\listoffigures*
 \cleardoublepage
-%\pdfbookmark[0]{\listtablename}{lot}
-%\listoftables*
-%\cleardoublepage
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
 %\begin{siglas}
 %  \item[ABNT] Associação Brasileira de Normas Técnicas
 %  \item[abnTeX] ABsurdas Normas para TeX
