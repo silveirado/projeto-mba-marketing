@@ -1,0 +1,109 @@
+\documentclass[12pt,	twoside, a4paper,	brazil]{abntex2}
+
+\usepackage{uarial}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage[brazilian,hyperpageref]{backref}
+\usepackage[alf]{abntex2cite}
+
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+\renewcommand{\backref}{}
+\renewcommand*{\backrefalt}[4]{
+\ifcase #1 %
+	Nenhuma citação no texto.%
+\or %
+ Citado na página #2.%
+\else
+	Citado #1 vezes nas páginas #2.%
+\fi}%
+\renewcommand*\familydefault{\sfdefault}
+
+%Capa
+\titulo{O Código da Felicidade \\Planejamento de Marketing Digital}
+\autor{Derotino Fraga da Silveira Junior}
+\local{Brasil}
+\data{2016}
+\instituicao{%
+  Instituto Educacional do Rio Grande do Sul - IERGS
+  \par
+  Elaboração do Projeto de Marketing Digital
+  \par
+  Professor: Marcelo Benites}
+\tipotrabalho{Projeto de Trabalho de Conclusão}
+
+\preambulo{Projeto de implantação de estratégia de marketing para a Companhia de Processamento de Dados do Município de Porto Alegre - Procempa.}
+
+\definecolor{blue}{RGB}{41,5,195}
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title},
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={marketing}{redes sociais}{Procempa},
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+
+\setlength{\parindent}{1.3cm}
+\setlength{\parskip}{0.2cm}
+\makeindex
+
+\begin{document}
+\selectlanguage{brazil}
+\frenchspacing
+\imprimircapa
+\imprimirfolhaderosto
+%\pdfbookmark[0]{\listfigurename}{lof}
+%\listoffigures*
+\cleardoublepage
+%\pdfbookmark[0]{\listtablename}{lot}
+%\listoftables*
+%\cleardoublepage
+%\begin{siglas}
+%  \item[ABNT] Associação Brasileira de Normas Técnicas
+%  \item[abnTeX] ABsurdas Normas para TeX
+%\end{siglas}
+
+%\begin{simbolos}
+%  \item[$ \Gamma $] Letra grega Gama
+%  \item[$ \Lambda $] Lambda
+%  \item[$ \zeta $] Letra grega minúscula zeta
+%  \item[$ \in $] Pertence
+%\end{simbolos}
+
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+\textual
+
+\include{projeto-marketing-procempa-justificativa}
+
+\include{projeto-marketing-procempa-objetivos}
+
+\include{projeto-marketing-procempa-metodologia}
+
+\include{projeto-marketing-procempa-referencial}
+
+\include{projeto-marketing-procempa-cronograma}
+
+\postextual
+
+\bibliography{projeto-marketing-procempa-referencias}
+
+\phantompart
+
+\printindex
+
+\end{document}
